@@ -122,7 +122,7 @@
                         style="color: #171c60;font-size:25px !important; margin-top:80px;">Our Core Values</h6>
                     </div>
                 </div>
-               <div class="row p-5 d-none" style=" height: 350px !important;" id="bigscreen">
+               <div class="row p-5 " style=" height: 350px !important;" id="bigscreen">
                    
                         <div class="col-sm defaultIntroSize colorBlue">D
                         
@@ -280,6 +280,22 @@
             console.log('No sticky: ', window.pageYOffset)
         }
     }
+    $(window).resize(function () {
+        if (window.innerWidth <= 765) {
+            $(document).find('#bigscreen').addClass('d-none')
+
+        } else {
+            $(document).find('#bigscreen').removeClass('d-none');
+
+        }
+        if (window.innerWidth <= 533) {
+
+            $(document).find('#divaText div').addClass('text-center')
+        } else {
+
+            $(document).find('#divaText div').removeClass('text-center')
+        }
+    });
 </script>
 
 </html>

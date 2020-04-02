@@ -142,6 +142,9 @@ body{
    font-size:20px !important;
 
 }
+.control::-webkit-input-placeholder {
+    color: var(--color-2) !important;
+}
 select {
     width: 100%;
     padding: 5px;
@@ -291,6 +294,10 @@ background-position:  left top,  top, 4px;
 .headerText3{
     font-weight: 100;
     font-size: 20px;
+}
+.headerText4{
+    
+    font-size: 40px;
 }
 .sticky {
     position: fixed;

@@ -4,6 +4,8 @@
     --text-color: #d81d83;
     --blog-special-1: #d81c83;
     --blog-special-2: #f5a2ae;
+    --popup-color-top: #e380c1;
+    --light-blue: #56546e;
 }
 .justify-content-md-center > div{
     outline: thick tan;
@@ -291,6 +293,9 @@ background-position:  left top,  top, 4px;
 .colorTextPink{
     color: var(--text-color) !important;
 }
+.colorLightBlue{
+    color: var(--light-blue);
+}
 .headerText3{
     font-weight: 100;
     font-size: 20px;
@@ -368,4 +373,68 @@ label{
   /* BLOG END */
 
 
- 
+  .dModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    z-index: 9999999;
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.dModal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    /* padding: 1rem 1.5rem; */
+    width: 90%;
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    /* line-height: 1.5rem; */
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 40px !important;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    z-index: 999;
+    font-weight: 100;
+
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.popupColor{
+    background-color: var(--popup-color-top) !important;
+    
+}
+.calendarDivText{
+    font-weight: bold !important;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 12px
+}
+.days{
+    font-size: 40px; color:#ccc;font-weight: bold !important;
+}
+.calendarSelect{
+    border-color: #f5f2fd !important; 
+    background-color: #f5f2fd !important;
+}

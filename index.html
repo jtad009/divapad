@@ -27,8 +27,8 @@
                 <a class="navbar-brand d-none d-lg-block text-white ml-3" href="#"
                     style="width:300px;text-align:center; margin: 0 auto;"><img src="images/logo.png" alt="DIVA"
                         width="140" class="ml-5" /></a>
-                <a class="navbar-brand d-none d-sm-block d-lg-none d-md-none text-white" href="#"><img
-                        src="images/logo.png" alt="DIVA" /></a>
+                <a class="navbar-brand d-none d-sm-block d-lg-none d-md-block nav-mobile text-white" href="#"><img
+                        src="images/logo.png" alt="DIVA" class="img-fluid"/></a>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav nav ml-auto">
                         <li class="nav-item active">
@@ -420,17 +420,15 @@
         </div>
 
     </div>
-    <div class="dModal">
+    <div class="dModal" id="firstPopup">
         <div class="dModal-content">
             <span class="close-button">&times;</span>
-            <div class="row popupColor" style="margin-left: 0px; margin-right: 0px;">
+            <div class="row popupColor" style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);height: 300px">
                 <div class="col-8">
                     <h4 class="align-self-center ml-5 defaultIntroSize2 text-white "
                         style="font-size:60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
                 </div>
-                <div class="col-4">
-                    <img src="images/popup-bg.png" height="300" class="float-right mr-5" />
-                </div>
+                
             </div>
             <div class="row">
                 <div class="col-12 p-5" style="padding-bottom:  12px !important;padding-top:  12px !important;">
@@ -444,7 +442,7 @@
                 </div>
                 <div class="col-12 p-5 mb-4" style="padding-top:  0px !important;padding-bottom: 0px !important;">
                     <div class="row">
-                        <div class="col-3 rounded" style="background-color: #F5E6EB;margin-left:60px">
+                        <div class="col-sm-3 col-md-3  col-xl-3 rounded mb-1 periodWidget" style="background-color: #F5E6EB;margin-left:60px">
                             <div class="row">
                                 <div class="col-3 ">
                                     <div class="days">01</div>
@@ -473,15 +471,18 @@
                                                     </div>
                                                 </div>
                                             </form>
-
                                             <br />
-                                            <br />
+                                            <div class="d-none d-md-block">
+                                                
+                                                <br />
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 rounded" style="background-color: #F5E6EB;margin-left:60px">
+                        <div class="col-sm-3 col-md-3  col-xl-3  rounded mb-1 periodWidget" style="background-color: #F5E6EB;margin-left:60px">
                             <div class="row">
                                 <div class="col-3 ">
                                     <div class="days">02</div>
@@ -510,7 +511,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 rounded" style="background-color: #F5E6EB;margin-left:60px">
+                        <div class="col-sm-3 col-md-3  col-xl-3 rounded periodWidget" style="background-color: #F5E6EB;margin-left:60px">
                             <div class="row">
                                 <div class="col-3 ">
                                     <div class="days">03</div>
@@ -545,7 +546,140 @@
                 </div>
                 <div class="col-12 p-3">
                     <p style="text-align: center;">
-                        <a class="text-center" href="#" style="color: #171c60; font-size: 18px;">&nbsp;Continue <i
+                        <a class="text-center secondTrigger" href="#" style="color: #171c60; font-size: 18px;">&nbsp;Continue <i
+                            class="fa fa-arrow-up" style="transform: rotate(45deg);"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dModal" id="secondPopup">
+        <div class="dModal-content">
+            <span class="close-button">&times;</span>
+            <div class="row popupColor" style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);height: 300px">
+                <div class="col-8">
+                    <h4 class="align-self-center ml-5 defaultIntroSize2 text-white "
+                        style="font-size:60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-12 p-5" style="padding-bottom:  12px !important;padding-top:  12px !important;">
+                    <p class="text-center colorBlue" style="font-size: 14px;">
+                        Hard to keep track of your menstrual cycle? DIVA's got you! Our easy tracking tool helps map out
+                        your cycle for months.
+                        <br />
+                        Plan a period-free beach trip or a big event like a wedding or track your peak ovulation times
+                        if you're trying.
+                    </p>
+                </div>
+                <div class="col-12 p-5 mb-4" style="padding-top:  0px !important;padding-bottom: 0px !important;">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3  col-xl-3 rounded mb-1 periodWidget" style="background-color: #F5E6EB;margin-left:60px">
+                            <div class="row">
+                                <div class="col-3 ">
+                                    <div class="days">01</div>
+                                </div>
+                                <div class="col-8 p-0">
+                                    <div class="row">
+                                        <div class="col-12 colorBlue calendarDivText">
+                                            WHEN DID YOU LAST PERIOD START?
+                                        </div>
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label>Month</label>
+                                                        <select class="form-control calendarSelect"
+                                                            style="font-size: 12px;height:  40px !important;width: 83px !important;padding-left: 6px;padding-right: 6px;">
+                                                            <option>Option</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label>Month</label>
+                                                        <select class="form-control calendarSelect"
+                                                            style="font-size: 12px;height:  40px !important;width: 83px !important;padding-left: 6px;padding-right: 6px;">
+                                                            <option>Option</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <br />
+                                            <div class="d-none d-md-block">
+                                                
+                                                <br />
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3  col-xl-3  rounded mb-1 periodWidget" style="background-color: #F5E6EB;margin-left:60px">
+                            <div class="row">
+                                <div class="col-3 ">
+                                    <div class="days">02</div>
+                                </div>
+                                <div class="col-8 p-0">
+                                    <div class="row">
+                                        <div class="col-12 colorBlue calendarDivText">
+                                            HOW MANY DAYS DID IT LAST?
+                                        </div>
+                                        <div class="col-12">
+
+                                            <div class="row mt-5" style="text-align: center;">
+                                                <div class="col-4">
+                                                    <i class="fa fa-play colorBlue" style="transform: rotate(180deg);"></i>
+                                                </div>
+                                                <div class="col-4 p-0">
+                                                    <p class="colorBlue">1</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <i class="fa fa-play colorBlue"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-3  col-xl-3 rounded periodWidget" style="background-color: #F5E6EB;margin-left:60px">
+                            <div class="row">
+                                <div class="col-3 ">
+                                    <div class="days">03</div>
+                                </div>
+                                <div class="col-8 p-0">
+                                    <div class="row">
+                                        <div class="col-12 colorBlue calendarDivText">
+                                           HOW LONG IS YOUR MENSTRUAL CYCLE?
+                                        </div>
+                                        <div class="col-12">
+
+                                            <div class="row mt-5" style="text-align: center;">
+                                                <div class="col-4">
+                                                    <i class="fa fa-play colorBlue" style="transform: rotate(180deg);"></i>
+                                                </div>
+                                                <div class="col-4 p-0">
+                                                    <p class="colorBlue">1</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <i class="fa fa-play colorBlue"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-12 p-3">
+                    <p style="text-align: center;">
+                        <a class="text-center" href="#" style="color: #171c60; font-size: 18px;">&nbsp;Save <i
                             class="fa fa-arrow-up" style="transform: rotate(45deg);"></i></a>
                     </p>
                 </div>
@@ -563,13 +697,24 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 <script>
-    var modal = document.querySelector(".dModal");
+    var modal = document.querySelector("#firstPopup");
+    var secondModal = document.querySelector("#secondPopup");
     var trigger = document.querySelector("a.trigger");
     var closeButton = document.querySelector(".close-button");
     $(document).on('click', 'a.trigger', function (e) {
         e.preventDefault();
-        console.log(e);
+       
         modal.classList.toggle("show-modal");
+    });
+    $(document).on('click', 'a.secondTrigger', function (e) {
+        e.preventDefault();
+       
+        secondModal.classList.toggle("show-modal");
+    });
+    $(document).on('click', 'span.close-button', function (e) {
+        e.preventDefault();
+        
+       document.querySelector('#'+$(this).parent().parent().attr('id')).classList.toggle("show-modal");
     });
     function toggleModal(e) {
         e.preventDefault();
@@ -584,7 +729,7 @@
     }
 
     // trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
+    // closeButton.addEventListener("click", toggleModal);
     window.addEventListener("click", windowOnClick)
     // When the user scrolls the page, execute myFunction
     window.onscroll = function () { myFunction() };
@@ -604,6 +749,9 @@
             header.classList.remove("sticky");
             console.log('No sticky: ', window.pageYOffset)
         }
+    }
+    if (window.innerWidth <= 580) {
+        $(document).find('div.periodWidget').addClass('margin-none')
     }
 </script>
 

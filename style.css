@@ -6,6 +6,10 @@
     --blog-special-2: #f5a2ae;
     --popup-color-top: #e380c1;
     --light-blue: #56546e;
+    --pre-menses: #fbff3d;
+    --menses-text:#d81d83;
+    --post-menses:#548364;
+    --ovulation-color: #ff810d;
 }
 .justify-content-md-center > div{
     outline: thick tan;
@@ -44,7 +48,7 @@
     min-height: 500px !important;
 }
 .five{
-    background-color: #fff;
+    background-color: #ffe4f3;
     min-height: 450px !important;
 }
 .six{
@@ -371,7 +375,11 @@ label{
     height: 340px !important;
  }
   /* BLOG END */
-
+/* about us page÷ */
+ .secondDivPadding{
+    padding-left:120px; padding-right:120px
+ }
+/* end about us page */
 
   .dModal {
     position: fixed;
@@ -441,11 +449,45 @@ label{
 .margin-none{
     margin-left: 0px !important
 }
-
+.trigger:hover{
+    text-decoration: none !important;
+}
+#calendar-body > tr > td,#calendar-body-2 > tr > td,#calendar-body-1 > tr > td, thead tr th{ 
+border:none !important;
+font-size: 8px;
+padding: 7px !important;
+text-align: center;
+}
+#monthAndYear{
+    margin-top: 7px;
+    font-size: 18px !important;
+}
 @media only screen and (max-width: 580px) {
     .nav-mobile {
         display: block !important;
         height: 70px !important;
         width: 100px !important;
     }
+    /* about us page÷ */
+ .secondDivPadding{
+    padding-left:30px; padding-right:30px
+ }
+ .periodWidget{
+    padding-left:6px !important; 
+    margin-bottom:10px !important; 
+ }
+/* end about us page */
   }
+
+.pre-menses{
+    background-color: var(--pre-menses);
+    color: var(--color-2) !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+.menses-text{background-color: var(--menses-text); color: white !important;  padding: 5px !important; text-align: center !important;}
+.post-menses{background-color: var(--post-menses); color: white !important;  padding: 5px !important; text-align: center !important;}
+.ovulation-color{background-color: var(--ovulation-color); color: var(--color-2) !important;  padding: 5px !important; text-align: center !important;}
+.colorPurple{
+    background: #e380c1;
+}

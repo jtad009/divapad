@@ -477,8 +477,28 @@ text-align: center;
     margin-bottom:10px !important; 
  }
 /* end about us page */
+/* #firstPopup .defaultIntroSize2{
+    font-size: 30px !important;
+} */
+.popupHeader{
+    height: 210px !important;
+}
+.popupHeight{
+    height: 400px;
+    overflow: auto;
+}
+.dModal-content{
+    top: 53% !important;
+}
   }
+  .popupHeader{
+    height: 300px
+}
 
+
+  /* #firstPopup .defaultIntroSize2{
+    font-size: 60px !important;
+} */
 .pre-menses{
     background-color: var(--pre-menses);
     color: var(--color-2) !important;

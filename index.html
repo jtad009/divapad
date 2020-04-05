@@ -423,15 +423,17 @@
     <div class="dModal" id="firstPopup">
         <div class="dModal-content">
             <span class="close-button">&times;</span>
-            <div class="row popupColor"
-                style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);height: 300px">
+            <div class="row popupColor popupHeader"
+                style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);">
                 <div class="col-8">
-                    <h4 class="align-self-center ml-5 defaultIntroSize2 text-white "
-                        style="font-size:60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
+                    <h4 class="align-self-center ml-5 defaultIntroSize2 text-white d-none d-lg-block"
+                        style="font-size: 60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
+                    <h4 class="align-self-center ml-3 defaultIntroSize2 text-white d-sm-block d-lg-none "
+                        style="font-size: 40px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row popupHeight">
                 <div class="col-12 p-5" style="padding-bottom:  12px !important;padding-top:  12px !important;">
                     <p class="text-center colorBlue" style="font-size: 14px;">
                         Hard to keep track of your menstrual cycle? DIVA's got you! Our easy tracking tool helps map out
@@ -470,7 +472,7 @@
                                                         <select class="form-control calendarSelect periodDay"
                                                             style="font-size: 12px;height:  40px !important;width: 83px !important;padding-left: 6px;padding-right: 6px;">
                                                             <option>Option</option>
-                                                           
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -575,56 +577,61 @@
     <div class="dModal" id="secondPopup">
         <div class="dModal-content">
             <span class="close-button">&times;</span>
-            <div class="row popupColor"
-                style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);height: 300px">
+            <div class="row popupColor popupHeader"
+                style="margin-left: 0px; margin-right: 0px;background-image: url(images/popup-header.jpg);">
                 <div class="col-8">
-                    <h4 class="align-self-center ml-5 defaultIntroSize2 text-white "
-                        style="font-size:60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
+                    <h4 class="align-self-center ml-5 defaultIntroSize2 text-white d-none d-lg-block"
+                        style="font-size: 60px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
+                    <h4 class="align-self-center ml-3 defaultIntroSize2 text-white d-sm-block d-lg-none "
+                        style="font-size: 40px !important; margin-top: 100px ">PERIOD CALCULATOR</h4>
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row popupHeight">
                 <div class="col-12 p-5" style="padding-bottom:  12px !important;padding-top:  12px !important;">
                     <p class="text-center colorBlue" style="font-size: 14px;">
                         <a href="#" class="small float-left colorBlue"><i class="fa fa-play colorBlue mr-3"
-                            style="transform: rotate(180deg);"></i>PREV 3 MONTHS</a>
-                        <a href="#" class="small float-right colorBlue">PREV 3 MONTHS<i class="fa fa-play colorBlue ml-3"
-                            ></i></a>
+                                style="transform: rotate(180deg);"></i>PREV 3 MONTHS</a>
+                        <a href="#" class="small float-right colorBlue">NEXT 3 MONTHS<i
+                                class="fa fa-play colorBlue ml-3"></i></a>
                     </p>
                 </div>
                 <div class="col-12  mb-4" style="padding-top:  0px !important;padding-bottom: 0px !important;">
                     <div class="row">
                         <div class="col-sm-4 col-md-4  col-xl-3 rounded periodWidget"
-                        style="background-color: #F5E6EB;margin-left:80px">
-                        
-                        <div class="row"><h3 class="card-header small colorBlue w-100 colorPurple text-center ">IMPORTANT DATES</h3>
-                            <div class="col-12">
-                                <h3 class="text-center" id="monthAndYear"></h3>
-                                <table class="table small" id="calendar">
-                                    <thead>
-                                        <tr class="small">
-                                            <th>Sun</th>
-                                            <th>Mon</th>
-                                            <th>Tue</th>
-                                            <th>Wed</th>
-                                            <th>Thu</th>
-                                            <th>Fri</th>
-                                            <th>Sat</th>
-                                        </tr>
-                                    </thead>
+                            style="background-color: #F5E6EB;margin-left:80px">
 
-                                    <tbody id="calendar-body" class="small">
+                            <div class="row">
+                                <h3 class="card-header small colorBlue w-100 colorPurple text-center ">IMPORTANT DATES
+                                </h3>
+                                <div class="col-12">
+                                    <h3 class="text-center" id="monthAndYear"></h3>
+                                    <table class="table small" id="calendar">
+                                        <thead>
+                                            <tr class="small">
+                                                <th>Sun</th>
+                                                <th>Mon</th>
+                                                <th>Tue</th>
+                                                <th>Wed</th>
+                                                <th>Thu</th>
+                                                <th>Fri</th>
+                                                <th>Sat</th>
+                                            </tr>
+                                        </thead>
 
-                                    </tbody>
-                                </table>
+                                        <tbody id="calendar-body" class="small">
 
+                                        </tbody>
+                                    </table>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div class="col-sm-4 col-md-4  col-xl-3  rounded mb-1 periodWidget"
                             style="background-color: #F5E6EB;margin-left:60px">
                             <div class="row">
-                                <h3 class="card-header small colorBlue w-100 colorPurple text-center">IMPORTANT DATES</h3>
+                                <h3 class="card-header small colorBlue w-100 colorPurple text-center">IMPORTANT DATES
+                                </h3>
                                 <div class="col-12">
                                     <h3 class="text-center" id="monthAndYear"></h3>
                                     <table class="table small " id="calendar">
@@ -651,7 +658,8 @@
                         <div class="col-sm-4 col-md-4  col-xl-3 rounded periodWidget"
                             style="background-color: #F5E6EB;margin-left:60px">
                             <div class="row">
-                                <h3 class="card-header small colorBlue w-100 colorPurple text-center">IMPORTANT DATES</h3>
+                                <h3 class="card-header small colorBlue w-100 colorPurple text-center">IMPORTANT DATES
+                                </h3>
                                 <div class="col-12">
                                     <h3 class="text-center" id="monthAndYear"></h3>
                                     <table class="table small" id="calendar">
@@ -796,6 +804,7 @@
     var calendarObject = {
 
         today: new Date(),
+        cycle: 0,
         selectYear: this.currentYear,
         selectMonth: document.querySelector(".periodMonth"),
         selectDay: document.querySelector(".periodDay"),
@@ -810,9 +819,9 @@
             });
         },
         fillDays: () => {
-            let days =  range(1, 31);
-           
-           days.forEach((element, i) => {
+            let days = range(1, 31);
+
+            days.forEach((element, i) => {
                 options = document.createElement('option');
                 options.text = element;
                 options.value = i;
@@ -827,21 +836,34 @@
 
             div.forEach((divID, index) => {
                 // index++;
-                console.log('Hit ehre : ',index)
-                let firstDay;
-            
-     firstDay = (new Date(year, month + index)).getDay();
-//  firstDay = (new Date(year, month + index)).getDay();
-//      console.log("First 2: ", firstDay)
+                // var periodDate = Date.parse(calendarObject.today.getFullYear() + "-" + (parseInt(calendarObject.selectMonth.value) + 1) + "-" + (calendarObject.cycle === 0 ? parseInt(calendarObject.selectDay.value) : calendarObject.cycle));
+                // var daysAgo = periodDate - 1000 * 3600 * 24 * calendarObject.preMenses;
+                // var selectedDate = new Date(daysAgo);
+                // if(index == 0){
+                //     calendarObject.cycle = selectedDate.getDate();
+                // }
+                
+                // if(index > 0){
+                //     calendarObject.cycle = calendarObject.factorCycle(selectedDate.getDate(), calendarObject.daysInMonth((month + index), year))+2;
+                //     console.log("Next Date: ", calendarObject.cycle)
+                // }
+                
 
-            //    console.log("Hi thre: ",firstDay)
+
+                let firstDay;
+
+                firstDay = (new Date(year, month + index)).getDay();
+                //  firstDay = (new Date(year, month + index)).getDay();
+                //      console.log("First 2: ", firstDay)
+
+                //    console.log("Hi thre: ",firstDay)
                 tbl = document.getElementById(divID); // body of the calendar
-               
+
                 // clearing all previous cells
                 tbl.innerHTML = "";
 
                 // filing data about month and in the page via DOM.
-                $("#" + divID).parent().parent().find("#monthAndYear").html(firstDay);
+                $("#" + divID).parent().parent().find("#monthAndYear").html(months[month+index] + " " + year);
                 // calendarObject.selectMonth.value = month + i;
 
                 // creating all cells
@@ -868,16 +890,16 @@
                             span.innerHTML = date;
                             let predictedDays = calendarObject.predictDays();
                             predictedDays.forEach((type, index) => {
-                                   switch(index){
-                                       case 0:
+                                switch (index) {
+                                    case 0:
                                         type.forEach(dates => {
-                                            if(dates === date){
+                                            if (dates === date) {
                                                 console.log(dates, date);
                                                 span.classList.add("pre-menses");
                                                 span.classList.add("rounded-circle");
                                             }
                                         });
-                                    break;
+                                        break;
                                     case 1:
                                         type.forEach(dates => {
                                             if(dates === date){
@@ -889,7 +911,7 @@
                                     break;
                                     case 2:
                                         type.forEach((dates, r) => {
-                                            
+
                                             if(dates === date){
                                                 console.log(dates, date);
                                                 if(r <=1){
@@ -898,25 +920,25 @@
                                                 }else{
                                                     // cell.classList.add("bg-white");
                                                 }
-                                                
-                                                
+
+
                                             }
                                         });
                                         break
                                         case 3:
                                         type.forEach(dates => {
                                             if(dates === date){
-                                               
+
                                                 span.classList.add("ovulation-color");
                                                 span.classList.add("rounded-circle");
                                             }
                                         });
                                         break
-                                        
-                                       default:
-                                           break;
-                                   }
-                                    
+
+                                    default:
+                                        break;
+                                }
+
                             });
 
                             if (date === calendarObject.today.getDate() && year === calendarObject.today.getFullYear() && (month + index) === calendarObject.today.getMonth()) {
@@ -943,43 +965,62 @@
             return 32 - new Date(iYear, iMonth, 32).getDate();
         },
         predictDays: () => {
+            /**
+             * if calendarIndex > 0
+             * Calculate next start date
+             * 
+             * 
+             * 
+             * 
+             * */
+
             var periodDate = Date.parse(calendarObject.today.getFullYear() + "-" + (parseInt(calendarObject.selectMonth.value) + 1) + "-" + parseInt(calendarObject.selectDay.value));
             var daysAgo = periodDate - 1000 * 3600 * 24 * calendarObject.preMenses;
             var selectedDate = new Date(daysAgo);
-            var guessPeriodDays = range(parseInt(calendarObject.selectDay.value)+1, (parseInt(calendarObject.selectDay.value)+parseInt(document.querySelector('.noOfDays').innerHTML)));
+            var guessPeriodDays = range(parseInt(calendarObject.selectDay.value) + 1, (parseInt(calendarObject.selectDay.value) + parseInt(document.querySelector('.noOfDays').innerHTML)));
+
             var days = [];
-            days.push([selectedDate.getDate(), selectedDate.getDate()+1, ]); //first and second days before period begins
+            days.push([selectedDate.getDate(), selectedDate.getDate()+ 1,]); //first and second days before period begins
             days.push(guessPeriodDays); //period days 
-            let freeDays = calendarObject.predictFreeDays(guessPeriodDays[guessPeriodDays.length-1], parseInt(document.querySelector('.noOfDays').innerHTML)); //array at last place - duration of periond
+            let freeDays = calendarObject.predictFreeDays(guessPeriodDays[guessPeriodDays.length - 1], parseInt(document.querySelector('.noOfDays').innerHTML)); //array at last place - duration of periond
             days.push(freeDays);
-            let ovulation = calendarObject.predictOvulation(freeDays[freeDays.length-1], parseInt(document.querySelector('.noOfDays').innerHTML));
+            let ovulation = calendarObject.predictOvulation(freeDays[freeDays.length - 1], parseInt(document.querySelector('.noOfDays').innerHTML));
             days.push(ovulation);
-            
-           
+            // console.log(days)
+
+
+
+
             return days;
+        },
+        factorCycle: (startDate, numberIndays) => {
+            console.log("Start Date: ", startDate + " 28 " + numberIndays)
+            let cycle = (startDate + 28) - numberIndays;
+
+            return cycle;
+
         },
         predictFreeDays: (endDate, duration) => {
             let max = 10;
             let allowedFreeDays = max - duration;
-            let rangeData = range(endDate+1, allowedFreeDays+endDate);
-            let ovulation = calendarObject.predictOvulation(rangeData[rangeData.length-1], duration)
-           
+            let rangeData = range(endDate + 1, allowedFreeDays + endDate);
+            let ovulation = calendarObject.predictOvulation(rangeData[rangeData.length - 1], duration)
+
             return [...rangeData];
         },
-        predictOvulation: (startDate, duration)=>{
-            
-            return range(startDate+1, duration+startDate);
+        predictOvulation: (startDate, duration) => {
+
+            return range(startDate + 1, duration + startDate);
         }
     }
-   
-    const range =  (x,y) => Array.from((function*(){
-                        while (x <= y) yield x++;
-        })
-    ());
+
+    const range = (x, y) => Array.from((function* () {
+        while (x <= y) yield x++;
+    })
+        ());
     //Fill Months
     calendarObject.fillMonths()
-    calendarObject.fillDays();
-    console.log(range(6,17));
+    calendarObject.fillDays(); console.log(range(6, 17));
 
 
 </script>

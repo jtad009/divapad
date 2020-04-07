@@ -706,7 +706,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-<script src="calendar.js"></script>
+<script src="moment.min.js"></script>
+<script src="divaCalendar.js"></script>
 <script>
     var modal = document.querySelector("#firstPopup");
     var secondModal = document.querySelector("#secondPopup");
@@ -801,228 +802,65 @@
         }
         $this.parent().parent().find('p').text(number);
     });
-    var calendarObject = {
-
-        today: new Date(),
-        cycle: 0,
-        selectYear: this.currentYear,
-        selectMonth: document.querySelector(".periodMonth"),
-        selectDay: document.querySelector(".periodDay"),
-        preMenses: 1, postMenses: 2, freeDays: 2,
-        months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        fillMonths: () => {
-            calendarObject.months.forEach((element, i) => {
-                options = document.createElement('option');
-                options.text = element;
-                options.value = i;
-                document.querySelector(".periodMonth").append(options)
-            });
-        },
-        fillDays: () => {
-            let days = range(1, 31);
-
-            days.forEach((element, i) => {
-                options = document.createElement('option');
-                options.text = element;
-                options.value = i;
-                document.querySelector(".periodDay").append(options)
-            });
-        },
-        next: () => { },
-        previous: () => { },
-        jump: () => { },
-        showCalendar: (month, year, div) => {
-
-
-            div.forEach((divID, index) => {
-                // index++;
-                // var periodDate = Date.parse(calendarObject.today.getFullYear() + "-" + (parseInt(calendarObject.selectMonth.value) + 1) + "-" + (calendarObject.cycle === 0 ? parseInt(calendarObject.selectDay.value) : calendarObject.cycle));
-                // var daysAgo = periodDate - 1000 * 3600 * 24 * calendarObject.preMenses;
-                // var selectedDate = new Date(daysAgo);
-                // if(index == 0){
-                //     calendarObject.cycle = selectedDate.getDate();
-                // }
-                
-                // if(index > 0){
-                //     calendarObject.cycle = calendarObject.factorCycle(selectedDate.getDate(), calendarObject.daysInMonth((month + index), year))+2;
-                //     console.log("Next Date: ", calendarObject.cycle)
-                // }
-                
-
-
-                let firstDay;
-
-                firstDay = (new Date(year, month + index)).getDay();
-                //  firstDay = (new Date(year, month + index)).getDay();
-                //      console.log("First 2: ", firstDay)
-
-                //    console.log("Hi thre: ",firstDay)
-                tbl = document.getElementById(divID); // body of the calendar
-
-                // clearing all previous cells
-                tbl.innerHTML = "";
-
-                // filing data about month and in the page via DOM.
-                $("#" + divID).parent().parent().find("#monthAndYear").html(months[month+index] + " " + year);
-                // calendarObject.selectMonth.value = month + i;
-
-                // creating all cells
-                let date = 1;
-                for (let i = 0; i < 6; i++) {
-                    // creates a table row
-                    let row = document.createElement("tr");
-
-                    //creating individual cells, filing them up with data.
-                    for (let j = 0; j < 7; j++) {
-                        if (i === 0 && j < firstDay) {
-                            cell = document.createElement("td");
-                            span = document.createElement('span');
-                            cellText = document.createTextNode("");
-                            cell.appendChild(span);
-                            row.appendChild(cell);
-                        }
-                        else if (date > calendarObject.daysInMonth((month + index), year)) {
-                            break;
-                        }
-                        else {
-                            cell = document.createElement("td");
-                            span = document.createElement('span');
-                            span.innerHTML = date;
-                            let predictedDays = calendarObject.predictDays();
-                            predictedDays.forEach((type, index) => {
-                                switch (index) {
-                                    case 0:
-                                        type.forEach(dates => {
-                                            if (dates === date) {
-                                                console.log(dates, date);
-                                                span.classList.add("pre-menses");
-                                                span.classList.add("rounded-circle");
-                                            }
-                                        });
-                                        break;
-                                    case 1:
-                                        type.forEach(dates => {
-                                            if(dates === date){
-                                                console.log(dates, date);
-                                                span.classList.add("menses-text");
-                                                span.classList.add("rounded-circle");
-                                            }
-                                        });
-                                    break;
-                                    case 2:
-                                        type.forEach((dates, r) => {
-
-                                            if(dates === date){
-                                                console.log(dates, date);
-                                                if(r <=1){
-                                                    span.classList.add("post-menses");
-                                                    span.classList.add("rounded-circle");
-                                                }else{
-                                                    // cell.classList.add("bg-white");
-                                                }
-
-
-                                            }
-                                        });
-                                        break
-                                        case 3:
-                                        type.forEach(dates => {
-                                            if(dates === date){
-
-                                                span.classList.add("ovulation-color");
-                                                span.classList.add("rounded-circle");
-                                            }
-                                        });
-                                        break
-
-                                    default:
-                                        break;
-                                }
-
-                            });
-
-                            if (date === calendarObject.today.getDate() && year === calendarObject.today.getFullYear() && (month + index) === calendarObject.today.getMonth()) {
-                                cell.classList.add("bg-info");
-                            } // color today's date
-                            cell.appendChild(span);
-                            row.appendChild(cell);
-                            date++;
-                        }
-
-
-                    }
-
-                    tbl.appendChild(row); // appending each row into calendar body.
-                    // tbl = '';
-                }
-            })
-
-
-        },
-        daysInMonth: (iMonth, iYear) => {
-            // console.log(iMonth, iYear);
-            // console.log(new Date(iYear, iMonth, 32).getDate());
-            return 32 - new Date(iYear, iMonth, 32).getDate();
-        },
-        predictDays: () => {
-            /**
-             * if calendarIndex > 0
-             * Calculate next start date
-             * 
-             * 
-             * 
-             * 
-             * */
-
-            var periodDate = Date.parse(calendarObject.today.getFullYear() + "-" + (parseInt(calendarObject.selectMonth.value) + 1) + "-" + parseInt(calendarObject.selectDay.value));
-            var daysAgo = periodDate - 1000 * 3600 * 24 * calendarObject.preMenses;
-            var selectedDate = new Date(daysAgo);
-            var guessPeriodDays = range(parseInt(calendarObject.selectDay.value) + 1, (parseInt(calendarObject.selectDay.value) + parseInt(document.querySelector('.noOfDays').innerHTML)));
-
-            var days = [];
-            days.push([selectedDate.getDate(), selectedDate.getDate()+ 1,]); //first and second days before period begins
-            days.push(guessPeriodDays); //period days 
-            let freeDays = calendarObject.predictFreeDays(guessPeriodDays[guessPeriodDays.length - 1], parseInt(document.querySelector('.noOfDays').innerHTML)); //array at last place - duration of periond
-            days.push(freeDays);
-            let ovulation = calendarObject.predictOvulation(freeDays[freeDays.length - 1], parseInt(document.querySelector('.noOfDays').innerHTML));
-            days.push(ovulation);
-            // console.log(days)
-
-
-
-
-            return days;
-        },
-        factorCycle: (startDate, numberIndays) => {
-            console.log("Start Date: ", startDate + " 28 " + numberIndays)
-            let cycle = (startDate + 28) - numberIndays;
-
-            return cycle;
-
-        },
-        predictFreeDays: (endDate, duration) => {
-            let max = 10;
-            let allowedFreeDays = max - duration;
-            let rangeData = range(endDate + 1, allowedFreeDays + endDate);
-            let ovulation = calendarObject.predictOvulation(rangeData[rangeData.length - 1], duration)
-
-            return [...rangeData];
-        },
-        predictOvulation: (startDate, duration) => {
-
-            return range(startDate + 1, duration + startDate);
-        }
-    }
-
-    const range = (x, y) => Array.from((function* () {
-        while (x <= y) yield x++;
-    })
-        ());
+   
     //Fill Months
     calendarObject.fillMonths()
-    calendarObject.fillDays(); console.log(range(6, 17));
-
-
+    calendarObject.fillDays();
+    var predate;
+    for (let index = 0; index < 3; index++) {
+        // const element = array[index];
+        if(index=== 0){
+            getDates(index, 3, 5);
+        }else{
+            
+            getDates(index, predate.format('M')-1, predate.format('D'));
+        }
+        
+       
+    }
+    function getDates(index, startMonth,startDate){
+        
+        if(index > 0){
+           
+            var startdate = moment({year: 2020, months:startMonth, date: startDate});
+            var perioddate = moment({year: 2020, months:startMonth, date: startDate});
+            predate = startdate;
+            periodDate = perioddate.add(2, 'days')
+            console.log('Start-Date: ', [predate.format('D'), parseInt(predate.format('D'))+1])
+            numberOfDaysInMonth = calendarObject.daysInMonth(startdate.format('M'), 2020);
+            periodDays = range(periodDate.format('D'),parseInt(periodDate.format('D'))+5-1)
+       
+            modifiedPeriodDays = periodDays.map(element => {
+                
+                if(parseInt(element) > parseInt(numberOfDaysInMonth)){
+                   return parseInt(element) - parseInt(numberOfDaysInMonth);
+                    
+                }else{
+                    return element
+                }
+            });
+            console.log('Period-Date: ', modifiedPeriodDays)
+            
+        }else if(index === 0){
+    
+            var startdate = moment({year: 2020, months:startMonth, date: startDate});
+            var perioddate = moment({year: 2020, months:startMonth, date: startDate});
+            predate = startdate.subtract(2, 'days');
+        
+            console.log('Start-Date: ', [predate.format('D'), parseInt(predate.format('D'))+1])
+            console.log('Period-Date: ', range(parseInt(perioddate.format('D')), parseInt(perioddate.format('D'))+5-1))
+            // var cycle = startdate.add(28, 'days').format();
+            // console.log('Cycle:', cycle)
+            
+        }
+        var cycle = startdate.add(28, 'days');
+        console.log('Cycle:', cycle.format());
+        console.log('MonthToBegin: ', cycle.format('M'));
+        console.log('------------------------------')
+        console.log('------------------------------')
+        // getDates(startMonth,cycle);
+        
+    }
 </script>
 
 

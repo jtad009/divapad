@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-1: #b8237f;
     --color-2: #171C60;
     --text-color: #d81d83;
@@ -11,146 +11,169 @@
     --post-menses:#548364;
     --ovulation-color: #ff810d;
 }
-.justify-content-md-center > div{
+
+.justify-content-md-center>div {
     outline: thick tan;
-    border:1px solid #0000 !important;
-    width:100%;
-    padding:0px;
-}
-.one{
-    background-position: center;
-    background-image: url('images/img1.png');
-    background-color: #b8237f;
-    min-height: 500px !important;
-    background-size: cover;
-}
-.two{
-    background-color: white;
-    min-height:300px;
+    border: 1px solid #0000 !important;
+    width: 100%;
+    padding: 0px;
 }
 
-.three{
+.one {
+    background-position: center;
+    background-image: url('../img/img1.png');
+    background-color: #b8237f;
+    min-height: 500px !important;
+    background-size: 100% 100%;
+    /* margin-top: 90px; */
+}
+
+.two {
+    background-color: white;
+    min-height: 300px;
+}
+
+.three {
     background-size: cover;
     background-position: center;
-    background-image: url('images/bg2.png');
+    background-image: url('../img/bg2.png');
     background-color: #F5E6EB;
     min-height: 600px !important;
 }
-.girlWithBook{
-   
+
+.girlWithBook {
     background-position: center;
-    background-image: url('images/girlWithBook.png');
+    background-image: url('../img/girlWithBook.png');
     background-color: #F5E6EB;
     height: 400px !important;
 }
-.four{
+
+.four {
     background-color: #E7E8EC;
     min-height: 500px !important;
 }
-.five{
-    background-color: #ffe4f3;
+
+.five {
+    background-color: #fff;
     min-height: 450px !important;
 }
-.six{
+
+.six {
     background-size: cover;
     background-position: center;
-    background-image: url('images/bg5.png');
+    background-image: url('../img/bg5.png');
     background-color: #E9B9C8;
     min-height: 500px !important;
 }
-.seven{
+.six input::placeholder {
+   
+        color: var(--color-2);
+        font-size: 13px;
+        font-weight: lighter;
+      
+}
+.seven {
     background-color: #fff;
     min-height: 500px !important;
 }
-.eight{
+
+.eight {
     background-color: #FFFFFF;
     min-height: 500px !important;
 }
-.peachPage{
+
+.peachPage {
     background-color: #F5E6EB;
     min-height: 100%;
 }
-.greyPage{
+
+.greyPage {
     background-color: #f9f9ff;
     min-height: 100%;
 }
 
-#header{
-    background-color:white !important;
-    padding-bottom:2px;
+#header {
+    background-color: white !important;
+    padding-bottom: 2px;
     box-shadow: 1px 1px 5px #aaaaaa !important;
     z-index: 99999;
     position: fixed;
 }
-#header .nav-item  .nav-link{
-    margin-right: 20px ;
-    color:var(--text-color)!important;
-    
+
+#header .nav-item .nav-link {
+    margin-right: 20px;
+    color: var(--text-color);
 }
-#header .nav-item  > a:hover, .active{
+
+#header .nav-item>a:hover, .active>a {
     text-decoration: underline;
     color: var(--color-2) !important;
     /* border-color:  #171C60 !important; */
 }
-.footer{
-    background-color:#171C60 !important;
-    height:100%;
+
+.footer {
+    background-color: #171C60 !important;
+    height: 450px;
+    padding-left: 15% ;
+    padding-right: 15% ;
+    padding-top: 24px ;
+    padding-bottom: 24px ;
 }
-.footer  .div2 a{
-    
+
+.footer .div2 a {
     font-size: 16px;
     font-weight: lighter;
     margin-bottom: 8px !important;
 }
 
-.defaultIntroSize{
+.defaultIntroSize {
     font-family: 'Lexend Deca';
     font-size: 120px !important;
     font-weight: 600;
     /* color:#171C60 */
 }
-.defaultIntroSize2{
+
+.defaultIntroSize2 {
     font-family: 'Lexend Deca';
     font-size: 50px !important;
 }
 
-.defaultIntroSize3{
+.defaultIntroSize3 {
     font-family: 'Lexend Deca';
     font-size: 70px !important;
 }
 
-#introCaptions{
+#introCaptions {
     font-size: 70px;
     font-weight: 400;
     /* color:#171C60; */
 }
-.desc{
+
+.desc {
     margin-left: 55px !important;
 }
-body{
+
+body {
     font-family: 'Work Sans';
     width: 100% !important;
 }
 
-.text-pink{
-    color:var(--text-color) !important;
+.text-pink {
+    color: var(--text-color) !important;
 }
 
 /* subscribe input box border */
-.control{
+
+.control {
     border: 2px solid #fff;
-    
     color: #fff !important;
     width: 40%;
     height: 60px;
     font-weight: bold;
     border-radius: 25px;
-   font-size:20px !important;
+    font-size: 20px !important;
+}
 
-}
-.control::-webkit-input-placeholder {
-    color: var(--color-2) !important;
-}
 select {
     width: 100%;
     padding: 5px;
@@ -164,224 +187,252 @@ select {
     background-position-x: 95%;
     background-size: 23px;
 }
+
 /* Title Element */
-.blueTitle{
-    color:#171C60 ;
+
+.blueTitle {
+    color: #171C60;
     font-size: 12px !important;
     text-transform: capitalize !important;
-    font-weight:300 !important;
+    font-weight: 300 !important;
 }
-.whiteTitle{
-    color:white ;
+
+.whiteTitle {
+    color: white;
     font-size: 12px !important;
     text-transform: capitalize !important;
-    font-weight:300 !important;
+    font-weight: 300 !important;
 }
-.whiteTitle > hr{
+
+.whiteTitle>hr {
     border-color: white !important;
 }
-.two .title{
-    color:#171C60 !important;
+
+.two .title {
+    color: #171C60 !important;
     font-size: 12px !important;
     text-transform: capitalize;
-    font-weight:300 !important;
+    font-weight: 300 !important;
 }
-.three .title{
-    color:#E380C1 !important;
+
+.three .title {
+    color: #E380C1 !important;
     font-size: 12px !important;
     text-transform: capitalize;
-    font-weight:300 !important;
+    font-weight: 300 !important;
 }
-.two .title > hr, .blueTitle > hr{
+
+.two .title>hr, .blueTitle>hr {
     border-color: #171C60 !important;
 }
+
 /* This are for the borders in div 3 */
-.three .bottomLeftBorder{
-    
-        background-image: linear-gradient(transparent, grey),
-                          linear-gradient(grey, transparent);                 
-        background-repeat: no-repeat;
-        background-size: 1px 50%, 50%  1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
-        background-position: left bottom, left bottom, 4px;
-        
-    
-}
-.three .bottomRightBorder{
-    background-image: linear-gradient(transparent, transparent),
-    linear-gradient(transparent, transparent),
-    linear-gradient(transparent, transparent),
-    linear-gradient(grey, transparent);
-    
-   
-background-repeat: no-repeat;
-background-size: 1px 50%, 50%  1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
-background-position:  right bottom,  bottom, 4px 
-}
-.three .topRightBorder{
-    background-image: linear-gradient(grey, transparent),
-    linear-gradient(transparent, transparent),
-    linear-gradient(transparent, transparent),
-    linear-gradient(transparent, transparent);
-    
-   
-background-repeat: no-repeat;
-background-size: 1px 50%, 50%  1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
-background-position:  left top,  top, 4px;
+
+.three .bottomLeftBorder {
+    background-image: linear-gradient(transparent, grey), linear-gradient(grey, transparent);
+    background-repeat: no-repeat;
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, left bottom, 4px;
 }
 
-.btn-primary{
-    background-color:#171C60 !important;
-    border:1px solid #171C60 !important;
-    color:white;
+.three .bottomRightBorder {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(grey, transparent);
+    background-repeat: no-repeat;
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: right bottom, bottom, 4px
+}
+
+.three .topRightBorder {
+    background-image: linear-gradient(grey, transparent), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, top, 4px;
+}
+
+.btn-primary {
+    background-color: #171C60 !important;
+    border: 1px solid #171C60 !important;
+    color: white;
     font-size: 12px
 }
-.btn-primary:hover{
-    background-color:#171C60 !important;
-    border:1px solid #171C60 !important;
+
+.btn-primary:hover {
+    background-color: #171C60 !important;
+    border: 1px solid #171C60 !important;
 }
 
-
 /* Image overlaps div 5 and 6 */
-.five img{
+
+.five img {
     position: relative;
     /* top: 130px; */
     z-index: 9999;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.five img:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
-.circularDownDiv{
+.five img:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.circularDownDiv {
     width: 40px;
     border: 1px solid #fff;
     height: 40px;
     text-align: center;
 }
-.centerText{
+
+.centerText {
     text-align: center !important;
 }
 
-
 /* Custom Text Gradient indexPage */
-.gradientOne{
+
+.gradientOne {
     background: -webkit-linear-gradient(#d81d83, #d81d83);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.gradientTwo{
-    background-image: linear-gradient(to right,#d81d83 ,#171C60);
+.gradientTwo {
+    background-image: linear-gradient(to right, #d81d83, #171C60);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.gradientThree{
-    background-image: linear-gradient(to right,rgba(23, 28, 96) ,#171C60);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.headerText{
-    font-family: 'Lexend Deca';
-} 
 
-.colorRed{
+.gradientThree {
+    background-image: linear-gradient(to right, rgba(23, 28, 96), #171C60);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.headerText {
+    font-family: 'Lexend Deca';
+}
+
+.colorRed {
     color: var(--color-1) !important;
 }
-.colorBlue{
+
+.colorBlue {
     color: var(--color-2) !important;
 }
-.colorTextPink{
+
+.colorTextPink {
     color: var(--text-color) !important;
 }
-.colorLightBlue{
+
+.colorLightBlue {
     color: var(--light-blue);
 }
-.headerText3{
+
+.headerText3 {
     font-weight: 100;
     font-size: 20px;
 }
-.headerText4{
-    
-    font-size: 40px;
-}
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999999;
     box-shadow: 1px 1px 5px #aaaaaa
-  }
-  .sticky + .content {
+}
+
+.sticky+.content {
     padding-top: 102px;
-  }
+}
 
+/* FORM */
 
-  /* FORM */
-
-  form input, form select {
+form input, form select {
     border: 1px solid #fff !important;
     height: 45px !important;
-  }
-  form textarea{
+}
+
+form textarea {
     border: 1px solid #fff !important;
     outline: none !important;
-  }
-  form input:focus, form select:focus, form textarea:focus{
-      box-shadow: 0 0 0 0.2rem rgba(23,28,95,.78) !important;
-  }
-label{
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 28, 95, .78) !important;
+}
+
+label {
     color: #ccc !important;
     font-size: 13px;
-  }
-  #accordion .card{
-      margin-bottom: 20px !important;
-      border: none !important;
-      padding: 10px
-  }
-  #accordion .card-header{
-      background-color: #fff ;
-      border: none !important;
-     
-     
-  }
-  #accordion .card-header a{
+}
+
+#accordion .card {
+    margin-bottom: 20px !important;
+    border: none !important;
+    padding: 10px
+}
+
+#accordion .card-header {
+    background-color: #fff;
+    border: none !important;
+}
+
+#accordion .card-header a {
     color: var(--color-2) !important;
     text-decoration: none !important;
-  }
-  #accordion .card-body{
+}
+
+#accordion .card-body {
     color: #6e6d98 !important;
     font-size: 14px;
-  }
-  .smallText{
+}
+
+.smallText {
     font-weight: 100;
     font-size: 14px !important;
-  }
+}
 
+/* BLOG */
 
+.blogBg {
+    background-color: var(--blog-special-1) !important;
+}
 
-  /* BLOG */
-  .blogBg{
-      background-color: var(--blog-special-1) !important;
-  }
-  .blogBg2{
+.blogBg2 {
     background-color: var(--blog-special-2) !important;
 }
-  .div400{
+
+.div400 {
     background-position: center;
     height: 340px !important;
- }
-  /* BLOG END */
-/* about us page÷ */
- .secondDivPadding{
-    padding-left:120px; padding-right:120px
- }
-/* end about us page */
+}
 
-  .dModal {
+/* BLOG END */
+
+.pagination li {
+    font-size: 14px !important;
+    padding: 8px !important;
+}
+
+.pagination li a {
+    color: var(--color-2) !important;
+}
+
+.pagination li.next {
+    border: 1px solid #ccc !important;
+    margin-left: 8px;
+    padding: 8px !important;
+    width: 5%;
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.pagination li.next>a {
+    padding: 8px !important;
+}
+
+.dModal {
     position: fixed;
     left: 0;
     top: 0;
@@ -394,6 +445,9 @@ label{
     z-index: 9999999;
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
+#secondPopup .dModal-content {
+    top: 51%;
+}
 .dModal-content {
     position: absolute;
     top: 50%;
@@ -404,6 +458,7 @@ label{
     width: 90%;
     border-radius: 0.5rem;
 }
+
 .close-button {
     float: right;
     width: 1.5rem;
@@ -418,96 +473,143 @@ label{
     top: 8px;
     z-index: 999;
     font-weight: 100;
+}
 
-}
 .close-button:hover {
-    background-color: darkgray;
+    background-color:transparent;
 }
+
 .show-modal {
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-.popupColor{
+
+.popupColor {
     background-color: var(--popup-color-top) !important;
-    
 }
-.calendarDivText{
+
+.calendarDivText {
     font-weight: bold !important;
     font-size: 15px;
     text-align: center;
     padding-top: 12px
 }
-.days{
-    font-size: 40px; color:#ccc;font-weight: bold !important;
+
+.days {
+    font-size: 40px;
+    color: #ccc;
+    font-weight: bold !important;
 }
-.calendarSelect{
-    border-color: #f5f2fd !important; 
+
+.calendarSelect {
+    border-color: #f5f2fd !important;
     background-color: #f5f2fd !important;
 }
-.margin-none{
+
+.margin-none {
     margin-left: 0px !important
 }
-.trigger:hover{
+
+/* about us page÷ */
+
+.secondDivPadding {
+    padding-left: 120px;
+    padding-right: 120px
+}
+
+/* end about us page÷ */
+
+.trigger:hover {
     text-decoration: none !important;
 }
-#calendar-body > tr > td,#calendar-body-2 > tr > td,#calendar-body-1 > tr > td, thead tr th{ 
-border:none !important;
-font-size: 8px;
-padding: 7px !important;
-text-align: center;
+
+#calendar-body>tr>td, #calendar-body-2>tr>td, #calendar-body-1>tr>td, thead tr th {
+    border: none !important;
+    font-size: 8px;
+    padding: 7px !important;
+    text-align: center;
 }
-#monthAndYear{
+
+#monthAndYear {
     margin-top: 7px;
     font-size: 18px !important;
 }
+
 @media only screen and (max-width: 580px) {
+    .footer {
+        background-color: #171C60 !important;
+        height: 100% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
     .nav-mobile {
         display: block !important;
         height: 70px !important;
         width: 100px !important;
     }
     /* about us page÷ */
- .secondDivPadding{
-    padding-left:30px; padding-right:30px
- }
- .periodWidget{
-    padding-left:6px !important; 
-    margin-bottom:10px !important; 
- }
-/* end about us page */
-/* #firstPopup .defaultIntroSize2{
+    .secondDivPadding {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .periodWidget {
+        padding-left: 6px !important;
+        margin-bottom: 10px !important;
+    }
+    /* end about us page */
+    /* #firstPopup .defaultIntroSize2{
     font-size: 30px !important;
 } */
-.popupHeader{
-    height: 210px !important;
+    .popupHeader {
+        height: 210px !important;
+    }
+    .popupHeight {
+        height: 400px;
+        overflow: auto;
+    }
+    .dModal-content {
+        top: 53% !important;
+    }
 }
-.popupHeight{
-    height: 400px;
-    overflow: auto;
-}
-.dModal-content{
-    top: 53% !important;
-}
-  }
-  .popupHeader{
+
+.popupHeader {
     height: 300px
 }
 
-
-  /* #firstPopup .defaultIntroSize2{
+/* #firstPopup .defaultIntroSize2{
     font-size: 60px !important;
 } */
-.pre-menses{
+
+.pre-menses {
     background-color: var(--pre-menses);
     color: var(--color-2) !important;
     padding: 5px !important;
     text-align: center !important;
 }
-.menses-text{background-color: var(--menses-text); color: white !important;  padding: 5px !important; text-align: center !important;}
-.post-menses{background-color: var(--post-menses); color: white !important;  padding: 5px !important; text-align: center !important;}
-.ovulation-color{background-color: var(--ovulation-color); color: var(--color-2) !important;  padding: 5px !important; text-align: center !important;}
-.colorPurple{
+
+.menses-text {
+    background-color: var(--menses-text);
+    color: white !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.post-menses {
+    background-color: var(--post-menses);
+    color: white !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.ovulation-color {
+    background-color: var(--ovulation-color);
+    color: var(--color-2) !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.colorPurple {
     background: #e380c1;
 }

@@ -544,7 +544,7 @@ label {
     font-size: 18px !important;
 }
 .relatedItem{
-    margin-left: 1.5rem!important
+    margin-left: 59px important
 }
 @media only screen and (max-width: 580px) {
     .relatedItem{
